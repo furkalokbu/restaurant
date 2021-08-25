@@ -78,13 +78,17 @@ WSGI_APPLICATION = 'restaurant.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+#     'default': {
+#  'ENGINE': 'django.contrib.gis.db.backends.postgis',
+#         'NAME': 'restaurant_dev',
+#         'USER': 'postgres',
+#         'PASSWORD': 'postgres',
+#         'HOST': 'postgresdb.cqh8zx545xp6.eu-central-1.rds.amazonaws.com',
+#         'PORT': '5432',
+#     }
     'default': {
- 'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'restaurant_dev',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'postgresdb.cqh8zx545xp6.eu-central-1.rds.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
